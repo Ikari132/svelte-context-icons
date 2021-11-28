@@ -1,0 +1,37 @@
+{
+  "extends": "@tsconfig/svelte/tsconfig.json",
+  "include": [
+    "./**/*",
+  ],
+  "exclude": [
+    "node_modules/*",
+    "dist"                  
+  ],
+  "compilerOptions": {
+    "moduleResolution": "node",
+    "target": "es2017",
+    "module": "es2020",
+    "importsNotUsedAsValues": "remove",
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "sourceMap": true,
+    "strict": false,
+    "baseUrl": ".",
+    "paths": {
+      "@src/*": [
+        "src/*"
+      ],
+      "@components/*": [
+        "src/components/*"
+      ],
+    },
+    "types": [
+      "svelte",
+      "svelte/store",
+      "svelte/motion",
+      "svelte/transition",
+      "svelte/animate",
+      "svelte/easing"
+    ]
+  }
+}

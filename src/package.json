@@ -1,0 +1,29 @@
+{
+  "name": "@ayalab/svelte-context-icons",
+  "version": "0.1.0",
+  "description": "Lightweight and configurable icons for Svelte",
+  "main": "./index.ts",
+  "svelte": "./index.ts",
+  "types": "./index.ts",
+  "source": "./index.ts",
+  "author": "Anton Aksionau",
+  "scripts": {
+    "check": "svelte-check --human && tsc --noEmit",
+    "check:ts": "tsc --noEmit"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@tsconfig/svelte": "^1.0.10",
+    "cross-env": "^7.0.3",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.2.1",
+    "prettier-plugin-svelte": "^2.2.0",
+    "rimraf": "^3.0.2",
+    "svelte-check": "^1.2.3",
+    "svelte-preprocess": "^4.6.9"
+  },
+  "peerDependencies": {
+    "svelte": "^3.35.0",
+    "typescript": "^4.2.3"
+  }
+}
