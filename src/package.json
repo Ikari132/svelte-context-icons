@@ -1,6 +1,6 @@
 {
   "name": "@ayalab/svelte-context-icons",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Lightweight and configurable icons for Svelte",
   "main": "./index.ts",
   "svelte": "./index.ts",
