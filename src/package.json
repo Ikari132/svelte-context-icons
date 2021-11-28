@@ -28,7 +28,6 @@
     "svelte-preprocess": "^4.6.9"
   },
   "peerDependencies": {
-    "@tsconfig/svelte": "^1.0.10",
     "svelte": "^3.35.0",
     "typescript": "^4.2.3"
   }

@@ -1,5 +1,4 @@
 {
-  "extends": "@tsconfig/svelte/tsconfig.json",
   "include": [
     "./**/*",
   ],
@@ -16,14 +15,6 @@
     "esModuleInterop": true,
     "strict": false,
     "baseUrl": ".",
-    "paths": {
-      "@src/*": [
-        "src/*"
-      ],
-      "@components/*": [
-        "src/components/*"
-      ],
-    },
     "types": [
       "svelte",
       "svelte/store",
