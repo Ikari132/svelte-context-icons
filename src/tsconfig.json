@@ -5,7 +5,7 @@
   ],
   "exclude": [
     "node_modules/*",
-    "dist"                  
+    "dist"
   ],
   "compilerOptions": {
     "moduleResolution": "node",
@@ -14,7 +14,6 @@
     "importsNotUsedAsValues": "remove",
     "isolatedModules": true,
     "esModuleInterop": true,
-    "sourceMap": true,
     "strict": false,
     "baseUrl": ".",
     "paths": {
