@@ -4,7 +4,7 @@
   "description": "Lightweight and configurable icons for Svelte",
   "main": "./index.ts",
   "svelte": "./index.ts",
-  "types": "./index.ts",
+  "types": "./index.d.ts",
   "source": "./index.ts",
   "author": "Anton Aksionau",
   "keywords": [
@@ -15,7 +15,8 @@
   ],
   "scripts": {
     "check": "svelte-check --human && tsc --noEmit",
-    "check:ts": "tsc --noEmit"
+    "check:ts": "tsc --noEmit",
+    "dts": "svelte-dts -i index.ts -o index.d.ts"
   },
   "license": "MIT",
   "devDependencies": {
@@ -25,6 +26,7 @@
     "prettier-plugin-svelte": "^2.2.0",
     "rimraf": "^3.0.2",
     "svelte-check": "^1.2.3",
+    "svelte-dts": "^0.3.6",
     "svelte-preprocess": "^4.6.9"
   },
   "peerDependencies": {
