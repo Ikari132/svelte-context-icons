@@ -1,13 +1,13 @@
 <script lang="ts">
   import { getContext } from "svelte";
-  import { iconsKey } from "..";
+  import { ICONS_KEY } from "../constants";
   import type { Writable } from "svelte/store";
 
   export let name: string;
-  export let size = 24;
+  export let size: number;
   export let viewBox = "0 0 24 24";
 
-  const paths = getContext(iconsKey) as Writable<Record<string, string>>;
+  const paths = getContext(ICONS_KEY) as Writable<Record<string, string>>;
 
   if (!paths) {
     console.error(
@@ -15,10 +15,18 @@
     );
   }
 
+  let el: HTMLElement;
+
+  $: {
+    if (el && size) {
+      el.style.setProperty("--context-icon-size", size + "px");
+    }
+  }
+
   $: path = paths && $paths[name];
 </script>
 
-<div class="context-icon" style="width:{size}px;height:{size}px">
+<div bind:this={el} class="context-icon">
   {#if path}
     <svg {viewBox} xmlns="http://www.w3.org/2000/svg">
       <path d={path} />
@@ -27,7 +35,16 @@
 </div>
 
 <style>
+  :root {
+    --context-icon-size: 24px;
+  }
   .context-icon {
+    --context-icon-width: var(--context-icon-size);
+    --context-icon-height: var(--context-icon-size);
+
+    width: var(--context-icon-width);
+    height: var(--context-icon-height);
+
     display: inline-block;
     color: var(--context-icon-color);
   }

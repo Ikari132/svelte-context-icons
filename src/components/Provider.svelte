@@ -2,7 +2,7 @@
   import { setContext } from "svelte";
   import { Writable } from "svelte/store";
   import { writable } from "svelte/store";
-  import { iconsKey } from "..";
+  import { ICONS_KEY } from "../constants";
 
   export let paths = {};
 
@@ -10,7 +10,7 @@
     Record<keyof typeof paths, string>
   >;
 
-  setContext(iconsKey, iconsStore);
+  setContext(ICONS_KEY, iconsStore);
 
   $: {
     iconsStore.set(paths);

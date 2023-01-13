@@ -1,3 +1,3 @@
 export { default as Icon } from "./components/Icon.svelte";
 export { default as IconsProvider } from "./components/Provider.svelte";
-export const iconsKey = Symbol("context-icons");
+export { ICONS_KEY } from "./constants";

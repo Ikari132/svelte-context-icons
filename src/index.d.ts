@@ -9,6 +9,7 @@ export type TProviderProps = {
 };
 
 declare module "@ayalab/svelte-context-icons" {
+	export const ICONS_KEY: Symbol;
 	export class Icon extends SvelteComponentTyped<TIconProps, {}, {}> {}
 	export class IconsProvider extends SvelteComponentTyped<
 		{ paths: Record<string, string> },
