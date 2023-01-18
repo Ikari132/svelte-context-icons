@@ -4,15 +4,15 @@ export type TIconProps<T = string> = {
 	size?: number;
 	viewBox?: string;
 };
-export type TProviderProps = {
-	paths: Record<string, string>;
-};
+export type TIconsProviderProps<T extends string = string> = {
+	paths: Record<T, string>
+}
 
 declare module "@ayalab/svelte-context-icons" {
 	export const ICONS_KEY: Symbol;
 	export class Icon extends SvelteComponentTyped<TIconProps, {}, {}> {}
 	export class IconsProvider extends SvelteComponentTyped<
-		{ paths: Record<string, string> },
+		TIconsProviderProps,
 		{},
 		{}
 	> {}
