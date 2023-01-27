@@ -10,7 +10,7 @@
     "moduleResolution": "node",
     "target": "es2017",
     "module": "es2020",
-    "importsNotUsedAsValues": "remove",
+    "importsNotUsedAsValues": "error",
     "isolatedModules": true,
     "esModuleInterop": true,
     "strict": false,

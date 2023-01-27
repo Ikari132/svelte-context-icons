@@ -1,6 +1,6 @@
 <script lang="ts">
   import { setContext } from "svelte";
-  import { Writable } from "svelte/store";
+  import type { Writable } from "svelte/store";
   import { writable } from "svelte/store";
   import { ICONS_KEY } from "../constants";
 
