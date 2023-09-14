@@ -1,4 +1,4 @@
-import { SvelteComponentTyped } from "svelte";
+import { SvelteComponent } from "svelte";
 export type TIconProps<T = string> = {
 	name: T;
 	size?: number;
@@ -15,8 +15,8 @@ declare module "@ayalab/svelte-context-icons" {
 	export type TIconName = string;
 
 	export const ICONS_KEY: Symbol;
-	export class Icon extends SvelteComponentTyped<TIconProps<TIconName>, Record<string, any>, Record<string, any>> {}
-	export class IconsProvider extends SvelteComponentTyped<
+	export class Icon extends SvelteComponent<TIconProps<TIconName>, Record<string, any>, Record<string, any>> {}
+	export class IconsProvider extends SvelteComponent<
 		TIconsProviderProps,
 		Record<string, any>,
 		Record<string, any>
