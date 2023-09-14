@@ -3,18 +3,43 @@
 	import { paths } from './../icons-config';
 	import CodeBlock from '../lib/CodeBlock.svelte';
 
-	const code = `<Icon name="delete" />`;
+	const basicCode = `
+	<Icon name="delete" />
+	<Icon name="minus" />
+	`;
+
+	const advancedCode = `
+	<Icon name="close" />
+	<Icon name="account" size={48} />
+
+	<div style="--context-icon-size:10px;">
+		<Icon name="account" />
+	</div>
+	`;
 </script>
 
 <IconsProvider {paths}>
-	<div>
+	<section>
+		<h2>Basic usage</h2>
+		<p>You can use the icons like this</p>
 		<Icon name="delete" />
 		<Icon name="minus" />
-
+		<CodeBlock code={basicCode} />
+	</section>
+	<section>
+		<h2>Advanced usage</h2>
+		<p>You can change icons size in a different way</p>
 		<Icon name="close" />
 		<Icon name="account" size={48} />
 
-		<CodeBlock {code} />
+		<div style="--context-icon-size:10px;">
+			<Icon name="account" />
+		</div>
+		<CodeBlock code={advancedCode} />
+	</section>
+	<!-- <div>
+		<Icon name="close" />
+		<Icon name="account" size={48} />
 
 		<div style="--context-icon-size:10px;">
 			<Icon name="account" />
@@ -28,5 +53,5 @@
 			<Icon name="delete" />
 			Delete
 		</button>
-	</div>
+	</div> -->
 </IconsProvider>
