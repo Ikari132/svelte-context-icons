@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { Icon, IconsProvider } from '@ayalab/svelte-context-icons';
-	import { paths } from './../icons-config';
+	import { paths, anotherPaths } from './../icons-config';
 	import CodeBlock from '../lib/CodeBlock.svelte';
 
 	const basicCode = `
@@ -18,7 +18,7 @@
 	`;
 </script>
 
-<IconsProvider {paths}>
+<IconsProvider paths={{ ...paths, ...anotherPaths }}>
 	<section>
 		<h2>Basic usage</h2>
 		<p>You can use the icons like this</p>
