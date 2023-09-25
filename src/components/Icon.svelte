@@ -4,7 +4,7 @@
   import type { Writable } from "svelte/store";
 
   export let name: string;
-  export let size: number;
+  export let size: number = null;
   export let viewBox = "0 0 24 24";
 
   const paths = getContext(ICONS_KEY) as Writable<Record<string, string>>;
