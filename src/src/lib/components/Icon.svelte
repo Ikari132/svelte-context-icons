@@ -35,9 +35,6 @@
 </div>
 
 <style>
-  :root {
-    --context-icon-size: 24px;
-  }
   .context-icon {
     --context-icon-width: var(--context-icon-size);
     --context-icon-height: var(--context-icon-size);

@@ -20,7 +20,8 @@
 <slot />
 
 <style>
-  :root {
+  :global(:root) {
+    --context-icon-size: 24px;
     --context-icon-color: rgba(0, 0, 0, 0.8);
   }
 </style>
